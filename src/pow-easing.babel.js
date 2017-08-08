@@ -4,7 +4,7 @@
  * @param {Number} p Easing power.
  * @returns {Function} Easing function with the defined power.
  */
-const pow = (p = 2) => {
+const pow = function (p = 2) {
   const easeIn = (k => t => t ** k)(p);
   const easeOut = (k => t => 1 - Math.abs((t - 1) ** k))(p);
 

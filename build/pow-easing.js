@@ -120,7 +120,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   })(undefined, function (module, exports) {
     "use strict";
 
-    var _arguments = arguments;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
@@ -131,7 +130,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
      * @returns {Function} Easing function with the defined power.
      */
     var pow = function () {
-      var p = _arguments.length > 0 && _arguments[0] !== undefined ? _arguments[0] : 2;
+      var p = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 2;
 
       var easeIn = function (k) {
         return function (t) {
