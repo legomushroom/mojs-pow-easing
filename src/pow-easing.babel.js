@@ -17,4 +17,4 @@ const pow = (p = 2) => {
   };
 };
 
-export { pow };
+export default pow;
