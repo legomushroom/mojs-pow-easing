@@ -21,8 +21,7 @@ module.exports = function(config) {
     frameworks: ['jasmine'],
     // list of files / patterns to load in the browser
     files: [
-      'build/class-proto.js',
-      'spec/**/*.spec.js'
+      { pattern: 'spec/*.spec.babel.js', watched: false }
     ],
     // list of files to exclude
     exclude: [],
@@ -30,7 +29,12 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'build/class-proto.js': ['coverage']
+      'build/pow-easing.js': ['coverage'],
+      'spec/*.spec.babel.js': ['webpack'],
+    },
+
+    webpackMiddleware: {
+      stats: 'errors-only'
     },
 
     coverageReporter: {
@@ -49,6 +53,7 @@ module.exports = function(config) {
         }
       ],
     },
+
     // test results reporter to use
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: reporters,
